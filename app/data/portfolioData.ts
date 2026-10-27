@@ -24,7 +24,7 @@ export interface SkillCategory {
   skills: {
     name: string;
     level: number;
-    experience: string;
+    experience?: string;
     icon: string;
   }[];
 }
@@ -188,12 +188,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: "Layout",
     description: "Crafting pixel-perfect, accessible, and high-performance user interfaces.",
     skills: [
-      { name: "HTML5 / Semantic CSS3", level: 98, experience: "7+ Years", icon: "html" },
-      { name: "Tailwind CSS & Bootstrap 5", level: 96, experience: "6+ Years", icon: "tailwind" },
-      { name: "JavaScript (ES6+) & jQuery", level: 94, experience: "6+ Years", icon: "js" },
-      { name: "React / React 19", level: 92, experience: "4+ Years", icon: "react" },
-      { name: "Next.js (App Router)", level: 90, experience: "3+ Years", icon: "next" },
-      { name: "TypeScript", level: 88, experience: "3+ Years", icon: "ts" },
+      { name: "HTML5 / Semantic CSS3", level: 98, icon: "html" },
+      { name: "Tailwind CSS & Bootstrap 5", level: 96, icon: "tailwind" },
+      { name: "JavaScript (ES6+) & jQuery", level: 94, icon: "js" },
+      { name: "React / React 19", level: 92, icon: "react" },
+      { name: "Next.js (App Router)", level: 90, icon: "next" },
+      { name: "TypeScript", level: 88, icon: "ts" },
     ],
   },
   {
@@ -201,12 +201,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: "Figma",
     description: "Transforming ideas into interactive wireframes, prototypes, and user experiences.",
     skills: [
-      { name: "Figma & Adobe XD", level: 96, experience: "6+ Years", icon: "figma" },
-      { name: "Adobe Photoshop & Illustrator", level: 95, experience: "7+ Years", icon: "adobe" },
-      { name: "UI/UX Usability Testing (UT)", level: 92, experience: "5+ Years", icon: "ux" },
-      { name: "Interface Wireframing & Prototyping", level: 96, experience: "6+ Years", icon: "wireframe" },
-      { name: "Responsive Web & Mobile Design", level: 98, experience: "7+ Years", icon: "responsive" },
-      { name: "Design Systems & Visual Design", level: 94, experience: "6+ Years", icon: "system" },
+      { name: "Figma & Adobe XD", level: 96, icon: "figma" },
+      { name: "Adobe Photoshop & Illustrator", level: 95, icon: "adobe" },
+      { name: "UI/UX Usability Testing (UT)", level: 92, icon: "ux" },
+      { name: "Interface Wireframing & Prototyping", level: 96, icon: "wireframe" },
+      { name: "Responsive Web & Mobile Design", level: 98, icon: "responsive" },
+      { name: "Design Systems & Visual Design", level: 94, icon: "system" },
     ],
   },
   {
@@ -214,12 +214,11 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: "Server",
     description: "Integrating APIs, database models, and dynamic content management.",
     skills: [
-      { name: "Node.js & Express.js", level: 86, experience: "3+ Years", icon: "node" },
-      { name: "PHP & Backend Integrations", level: 85, experience: "4+ Years", icon: "php" },
-      { name: "MongoDB & Mongoose", level: 88, experience: "3+ Years", icon: "mongo" },
-      { name: "PostgreSQL & Prisma", level: 84, experience: "2+ Years", icon: "postgres" },
-      { name: "RESTful API Development", level: 90, experience: "4+ Years", icon: "api" },
-      { name: "Authentication (JWT & Auth)", level: 88, experience: "3+ Years", icon: "auth" },
+      { name: "Node.js & Express.js", level: 86, icon: "node" },
+      { name: "MongoDB", level: 88, icon: "mongo" },
+      { name: "MySQL", level: 84, icon: "mysql" },
+      { name: "RESTful API Development", level: 90, icon: "api" },
+      { name: "Authentication (JWT & Auth)", level: 88, icon: "auth" },
     ],
   },
   {
@@ -227,12 +226,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     icon: "Terminal",
     description: "Harnessing cutting-edge AI copilot workflows, search ranking, and version control.",
     skills: [
-      { name: "AI Acceleration (ChatGPT, Gemini, Claude, Copilot)", level: 96, experience: "3+ Years", icon: "ai" },
-      { name: "Search Engine Optimization (SEO)", level: 92, experience: "5+ Years", icon: "seo" },
-      { name: "Git & GitHub Version Control", level: 94, experience: "6+ Years", icon: "git" },
-      { name: "Core Web Vitals & Speed Optimization", level: 92, experience: "5+ Years", icon: "speed" },
-      { name: "Postman API Testing", level: 90, experience: "4+ Years", icon: "postman" },
-      { name: "Vercel & Cloud Deployment", level: 92, experience: "4+ Years", icon: "deploy" },
+      { name: "AI Acceleration (ChatGPT, Gemini, Claude, Copilot)", level: 96, icon: "ai" },
+      { name: "Search Engine Optimization (SEO)", level: 92, icon: "seo" },
+      { name: "Git & GitHub Version Control", level: 94, icon: "git" },
+      { name: "Core Web Vitals & Speed Optimization", level: 92, icon: "speed" },
+      { name: "Postman API Testing", level: 90, icon: "postman" },
+      { name: "Vercel & Cloud Deployment", level: 92, icon: "deploy" },
     ],
   },
 ];

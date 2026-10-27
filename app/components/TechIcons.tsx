@@ -174,8 +174,24 @@ export function TechIcon({ name, className = "w-5 h-5" }: TechIconProps) {
     );
   }
 
+  // MySQL
+  if (normalized.includes("mysql")) {
+    return (
+      <svg className={className} viewBox="0 0 24 24" fill="none">
+        <path
+          d="M3 13C3.5 10 5.5 8 9 7.5C13 7 15 9 17 8.5C18.5 8 19.5 7 20 6C20.5 8 20 10.5 18.5 12C17 13.5 15.5 14 13.5 13.5C11.5 13 10 14 8.5 16C7 18 5 18.5 3 17V13Z"
+          fill="#00758F"
+        />
+        <path
+          d="M12 11C13 9 15.5 8 18 8.5C16 10 14.5 11.5 13 12C12.5 12.2 12.2 11.6 12 11Z"
+          fill="#F29111"
+        />
+      </svg>
+    );
+  }
+
   // PostgreSQL
-  if (normalized.includes("postgre") || normalized.includes("sql") && !normalized.includes("mongo")) {
+  if (normalized.includes("postgre") || (normalized.includes("sql") && !normalized.includes("mongo"))) {
     return (
       <svg className={className} viewBox="0 0 24 24" fill="none">
         <path

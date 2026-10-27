@@ -145,8 +145,8 @@ export default function SkillsSection() {
                               {skill.name}
                             </span>
                           </div>
-                          <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-white/[0.04] text-zinc-400 border border-white/5">
-                            {skill.experience}
+                          <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-semibold">
+                            {skill.level}%
                           </span>
                         </div>
 
@@ -160,7 +160,9 @@ export default function SkillsSection() {
 
                         <div className="mt-2 flex items-center justify-between text-[11px] text-zinc-500 font-mono">
                           <span>Proficiency</span>
-                          <span className="text-cyan-400 font-semibold">{skill.level}%</span>
+                          <span className="text-zinc-400">
+                            {skill.level >= 95 ? "Mastery" : skill.level >= 90 ? "Expert" : "Proficient"}
+                          </span>
                         </div>
                       </div>
                     ))}
