@@ -133,6 +133,33 @@ export default function ContactSection() {
                 </button>
               </div>
 
+              {/* Direct Phone / WhatsApp */}
+              <div className="mt-3 p-4 rounded-xl bg-white/[0.03] border border-white/5 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3 overflow-hidden">
+                  <div className="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-400 shrink-0">
+                    <Phone className="w-4 h-4" />
+                  </div>
+                  <div className="truncate">
+                    <span className="text-[11px] text-zinc-400 block font-mono">Direct Phone / WhatsApp</span>
+                    <a
+                      href={`tel:${PERSONAL_INFO.phone}`}
+                      className="text-xs sm:text-sm font-semibold text-white hover:text-emerald-400 transition-colors block"
+                    >
+                      {PERSONAL_INFO.phone}
+                    </a>
+                  </div>
+                </div>
+
+                <a
+                  href={`https://wa.me/8801845130283`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 text-xs font-mono transition-all flex items-center gap-1.5 shrink-0"
+                >
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+
               {/* Response Time & Location Badges */}
               <div className="mt-4 grid grid-cols-2 gap-3">
                 <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5 flex items-center gap-2.5">
@@ -147,7 +174,7 @@ export default function ContactSection() {
                   <MapPin className="w-4 h-4 text-emerald-400 shrink-0" />
                   <div>
                     <span className="text-[10px] text-zinc-400 block font-mono">Location</span>
-                    <span className="text-xs font-semibold text-zinc-200">Global Remote</span>
+                    <span className="text-xs font-semibold text-zinc-200">Dhanmondi, Dhaka</span>
                   </div>
                 </div>
               </div>

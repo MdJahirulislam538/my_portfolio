@@ -106,8 +106,11 @@ export default function Footer() {
               </a>
             </div>
 
+            <p className="text-xs text-zinc-400 font-mono">
+              Email: {PERSONAL_INFO.email}
+            </p>
             <p className="text-xs text-zinc-500 font-mono">
-              Direct: {PERSONAL_INFO.email}
+              Phone: {PERSONAL_INFO.phone}
             </p>
           </div>
         </div>

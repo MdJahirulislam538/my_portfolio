@@ -22,10 +22,10 @@ import { PERSONAL_INFO } from "../data/portfolioData";
 
 export default function Hero() {
   const roles = [
-    "Full-Stack Web Developer",
-    "Next.js & React Specialist",
-    "TypeScript & UI/UX Craftsman",
-    "Scalable API & Cloud Architect",
+    "UI Engineer (ParonSoft Solution Ltd.)",
+    "FrontEnd & Web App Developer",
+    "UI/UX Designer & Prototyper",
+    "B.Sc. in CSE (Daffodil Int. University)",
   ];
 
   const [roleIndex, setRoleIndex] = useState(0);
@@ -44,9 +44,13 @@ export default function Hero() {
     const codeSnippet = `const developer = {
   name: "${PERSONAL_INFO.name}",
   role: "${PERSONAL_INFO.role}",
-  specialties: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL"],
-  status: "Available for Hire",
-  build: () => "High performance & pixel-perfect"
+  experience: "${PERSONAL_INFO.experienceYears} (ParonSoft Solution Ltd.)",
+  education: "${PERSONAL_INFO.educationDegree}",
+  location: "${PERSONAL_INFO.location}",
+  email: "${PERSONAL_INFO.email}",
+  phone: "${PERSONAL_INFO.phone}",
+  specialties: ["HTML5", "CSS3", "Tailwind CSS", "JavaScript", "React", "Next.js", "Figma", "UI/UX Usability Testing"],
+  status: "Available for Full-Time & Remote Contracts"
 };`;
     navigator.clipboard.writeText(codeSnippet);
     setCopied(true);
@@ -264,11 +268,23 @@ export default function Hero() {
                         <span className="text-emerald-300">&quot;{PERSONAL_INFO.role}&quot;</span>,
                       </p>
                       <p className="pl-4">
-                        <span className="text-zinc-400">focus:</span> [
-                        <span className="text-cyan-300">&quot;Next.js&quot;</span>,{" "}
-                        <span className="text-cyan-300">&quot;React 19&quot;</span>,{" "}
-                        <span className="text-cyan-300">&quot;TypeScript&quot;</span>,{" "}
-                        <span className="text-cyan-300">&quot;Node.js&quot;</span>],
+                        <span className="text-zinc-400">company:</span>{" "}
+                        <span className="text-cyan-300">&quot;ParonSoft Solution Ltd. (6 yrs)&quot;</span>,
+                      </p>
+                      <p className="pl-4">
+                        <span className="text-zinc-400">education:</span>{" "}
+                        <span className="text-cyan-300">&quot;B.Sc. in CSE (DIU)&quot;</span>,
+                      </p>
+                      <p className="pl-4">
+                        <span className="text-zinc-400">tech:</span> [
+                        <span className="text-cyan-300">&quot;HTML/CSS&quot;</span>,{" "}
+                        <span className="text-cyan-300">&quot;Tailwind&quot;</span>,{" "}
+                        <span className="text-cyan-300">&quot;React&quot;</span>,{" "}
+                        <span className="text-cyan-300">&quot;Figma UI/UX&quot;</span>],
+                      </p>
+                      <p className="pl-4">
+                        <span className="text-zinc-400">clients:</span>{" "}
+                        <span className="text-purple-300">&quot;Japan &amp; UK International&quot;</span>,
                       </p>
                       <p className="pl-4">
                         <span className="text-zinc-400">openForHire:</span>{" "}
@@ -380,49 +396,73 @@ export default function Hero() {
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div>
                 <h3 className="text-lg font-bold text-white">{PERSONAL_INFO.name} — Curriculum Vitae</h3>
-                <p className="text-xs text-zinc-400">{PERSONAL_INFO.role} • 3+ Years Experience</p>
+                <p className="text-xs text-cyan-400 font-mono">{PERSONAL_INFO.role} • 7+ Years Experience</p>
               </div>
               <button
                 onClick={() => setShowResumeModal(false)}
-                className="p-1 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10"
+                className="p-1.5 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10"
               >
                 ✕
               </button>
             </div>
 
-            <div className="mt-4 space-y-3 text-sm text-zinc-300">
+            <div className="mt-4 space-y-3 text-xs sm:text-sm text-zinc-300 max-h-[70vh] overflow-y-auto pr-1">
               <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                <p className="font-semibold text-white">Summary</p>
-                <p className="text-xs text-zinc-400 mt-1">{PERSONAL_INFO.bio}</p>
+                <p className="font-semibold text-white">Career Summary</p>
+                <p className="text-xs text-zinc-400 mt-1 leading-relaxed">{PERSONAL_INFO.bio}</p>
               </div>
+
               <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                <p className="font-semibold text-white">Core Competencies</p>
-                <p className="text-xs text-zinc-400 mt-1">
-                  Next.js, React, TypeScript, Node.js, Express, PostgreSQL, MongoDB, Tailwind CSS, REST APIs, Git.
+                <p className="font-semibold text-white">Experience (8.9 Years Total)</p>
+                <ul className="text-xs text-zinc-400 mt-1.5 space-y-1">
+                  <li>• <strong className="text-zinc-200">UI Engineer</strong> @ ParonSoft Solution Ltd. (Aug 2020 - Present, 6 yrs)</li>
+                  <li>• <strong className="text-zinc-200">Designer / UI Specialist</strong> @ Info Inlet (Feb 2019 - Jun 2020, 1.4 yrs)</li>
+                  <li>• <strong className="text-zinc-200">Designer &amp; Visualizer</strong> @ SBIT (Jan 2017 - Jun 2018, 1.5 yrs)</li>
+                </ul>
+              </div>
+
+              <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5">
+                <p className="font-semibold text-white">Education &amp; Academic Background</p>
+                <ul className="text-xs text-zinc-400 mt-1.5 space-y-1">
+                  <li>• <strong className="text-zinc-200">B.Sc. in Computer Science &amp; Engineering</strong> — Daffodil International University (DIU), 2021</li>
+                  <li>• <strong className="text-zinc-200">Diploma in Computer Science &amp; Engineering</strong> — ICST (CGPA 3.12 / 4.00), 2018</li>
+                  <li>• <strong className="text-zinc-200">SSC (Business Studies)</strong> — Government Ataturk Model High School, 2013</li>
+                </ul>
+              </div>
+
+              <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5">
+                <p className="font-semibold text-white">Government Trainings &amp; Certifications</p>
+                <p className="text-xs text-zinc-400 mt-1 leading-relaxed">
+                  • Govt. LICT Web Design &amp; Development (200 Hours) | Govt. LICT UI/UX Design (80 Hours) | SEIP SEO (60 Hours) | Govt. LEDP Graphic Design (200 Hours)
                 </p>
               </div>
+
               <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                <p className="font-semibold text-white">Contact & Links</p>
-                <p className="text-xs text-cyan-400 mt-1">
-                  Email: {PERSONAL_INFO.email} | Location: {PERSONAL_INFO.location}
-                </p>
+                <p className="font-semibold text-white">Contact &amp; Location</p>
+                <div className="text-xs text-zinc-400 mt-1 space-y-0.5">
+                  <p>📍 Location: {PERSONAL_INFO.location}</p>
+                  <p>📞 Phone: {PERSONAL_INFO.phone} / {PERSONAL_INFO.altPhone}</p>
+                  <p>✉️ Email: {PERSONAL_INFO.email}</p>
+                </div>
               </div>
             </div>
 
-            <div className="mt-6 flex items-center justify-end gap-3 pt-4 border-t border-white/10">
-              <button
-                onClick={() => setShowResumeModal(false)}
-                className="px-4 py-2 text-xs font-medium text-zinc-400 hover:text-white"
-              >
-                Close
-              </button>
-              <a
-                href="#contact"
-                onClick={() => setShowResumeModal(false)}
-                className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium flex items-center gap-1.5"
-              >
-                <Mail className="w-3.5 h-3.5" /> Request Full PDF CV
-              </a>
+            <div className="mt-5 flex items-center justify-between gap-3 pt-4 border-t border-white/10">
+              <span className="text-xs text-emerald-400 font-mono">Status: Ready for Interview</span>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setShowResumeModal(false)}
+                  className="px-4 py-2 text-xs font-medium text-zinc-400 hover:text-white"
+                >
+                  Close
+                </button>
+                <a
+                  href={`mailto:${PERSONAL_INFO.email}?subject=Job Opportunity / Project Inquiry for Md. Jahirul Islam`}
+                  className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-medium flex items-center gap-1.5"
+                >
+                  <Mail className="w-3.5 h-3.5" /> Email Jahirul
+                </a>
+              </div>
             </div>
           </div>
         </div>

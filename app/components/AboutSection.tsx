@@ -7,39 +7,41 @@ import {
   Code,
   Layers,
   HeartHandshake,
-  Check,
   MapPin,
   Globe,
   Mail,
   GraduationCap,
+  Bot,
+  Briefcase,
+  Phone,
 } from "lucide-react";
 import { PERSONAL_INFO } from "../data/portfolioData";
 
 export default function AboutSection() {
   const pillars = [
     {
-      title: "Performance First",
-      desc: "Architecting sub-second page loads, optimized assets, and 95+ Core Web Vitals scores.",
-      icon: Zap,
-      color: "text-amber-400 bg-amber-400/10 border-amber-400/20",
-    },
-    {
-      title: "Clean Architecture",
-      desc: "Strict TypeScript typings, component modularity, and maintainable scalable codebases.",
-      icon: Code,
+      title: "UI/UX & Frontend Mastery",
+      desc: "7+ years translating complex wireframes & designs into responsive, accessible web interfaces (HTML5, Tailwind, React, Next.js).",
+      icon: Layers,
       color: "text-cyan-400 bg-cyan-400/10 border-cyan-400/20",
     },
     {
-      title: "Pixel-Perfect UI/UX",
-      desc: "Bridging the gap between Figma designs and code with fluid micro-interactions.",
-      icon: Layers,
-      color: "text-indigo-400 bg-indigo-400/10 border-indigo-400/20",
+      title: "AI-Augmented Engineering",
+      desc: "Leveraging ChatGPT, Claude, Gemini, Copilot, and Figma AI to 3x productivity, optimize code, and accelerate prototyping.",
+      icon: Bot,
+      color: "text-purple-400 bg-purple-400/10 border-purple-400/20",
     },
     {
-      title: "Full-Cycle Delivery",
-      desc: "Taking projects seamlessly from requirements discovery to battle-tested production deployment.",
-      icon: HeartHandshake,
+      title: "Global Client Delivery",
+      desc: "Proven track record delivering mission-critical web applications for international clients across Japan, the UK, and Bangladesh.",
+      icon: Globe,
       color: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
+    },
+    {
+      title: "Usability & Architecture",
+      desc: "Deep focus on Usability Testing (UT), information architecture, pixel-perfect design systems, and resilient cloud deployments.",
+      icon: Zap,
+      color: "text-amber-400 bg-amber-400/10 border-amber-400/20",
     },
   ];
 
@@ -53,13 +55,13 @@ export default function AboutSection() {
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono font-medium mb-3">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>DISCOVER MY JOURNEY</span>
+            <span>PROFESSIONAL BACKGROUND</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Behind The Code &amp; <span className="text-gradient-cyan">Philosophy</span>
+            About Me &amp; <span className="text-gradient-cyan">Career Summary</span>
           </h2>
           <p className="mt-4 text-zinc-400 text-base max-w-2xl">
-            A developer who sees software not just as syntax, but as a craft that solves human problems and drives real business impact.
+            B.Sc. in Computer Science &amp; Engineering graduate with 7+ years of professional front-end and UI/UX experience.
           </p>
         </div>
 
@@ -95,9 +97,9 @@ export default function AboutSection() {
 
               {/* Floating Badge 1: Experience */}
               <div className="absolute -top-4 -right-4 px-4 py-2.5 rounded-2xl bg-[#0e172e]/90 border border-cyan-500/30 backdrop-blur-md shadow-xl flex items-center gap-2.5 animate-float">
-                <span className="text-2xl font-black text-cyan-400">3+</span>
+                <span className="text-2xl font-black text-cyan-400">7+</span>
                 <span className="text-[11px] font-semibold text-zinc-300 leading-tight">
-                  Years of<br />Dev Mastery
+                  Years of<br />Experience
                 </span>
               </div>
 
@@ -105,7 +107,7 @@ export default function AboutSection() {
               <div className="absolute -bottom-4 -left-4 px-3.5 py-2 rounded-2xl bg-[#0e172e]/90 border border-indigo-500/30 backdrop-blur-md shadow-xl flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-indigo-400" />
                 <span className="text-xs font-medium text-zinc-300">
-                  Bangladesh • Global Remote
+                  Dhanmondi, Dhaka
                 </span>
               </div>
             </div>
@@ -114,34 +116,47 @@ export default function AboutSection() {
           {/* Right Column: Bio and Pillars */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             <h3 className="text-2xl sm:text-3xl font-bold text-white leading-snug">
-              Transforming ambitious ideas into reliable, scalable digital reality.
+              UI Engineer &amp; Web Developer with over 7+ years of building impactful digital products.
             </h3>
 
             <p className="mt-4 text-zinc-300 leading-relaxed text-sm sm:text-base">
-              I am a results-oriented Web Developer with deep expertise across modern frontend ecosystems 
-              (React, Next.js, TypeScript, Tailwind) and full-stack backend integrations (Node.js, Express, 
-              PostgreSQL, MongoDB).
+              Completed <strong className="text-white">B.Sc. in Computer Science &amp; Engineering (CSE)</strong> from{" "}
+              <strong className="text-cyan-400">Daffodil International University (DIU)</strong> with over 7+ years of
+              specialized engineering experience in Web Design, FrontEnd Development, UI/UX Design, and Web Applications.
             </p>
 
             <p className="mt-3 text-zinc-400 leading-relaxed text-sm">
-              Over the last 3+ years, I have worked with international startups, agencies, and entrepreneurs 
-              to craft intuitive digital products. I take pride in writing clean, well-tested code, avoiding technical 
-              debt, and ensuring the final product feels effortless and rewarding for every user.
+              Currently serving as a <strong className="text-zinc-200">UI Engineer at ParonSoft Solution Ltd. (6 years)</strong>, 
+              where I conduct Usability Testing (UT), design GUI applications, create interactive wireframes, and develop robust responsive applications.
+              I have hands-on experience working with international clients from <strong className="text-indigo-300">Japan</strong> and the <strong className="text-indigo-300">United Kingdom (UK)</strong>, 
+              leveraging cutting-edge AI tools (ChatGPT, Gemini, Claude, Copilot, Figma AI) to maximize efficiency, clean code quality, and delivery speed.
             </p>
 
-            {/* Quick Details Chips */}
+            {/* Quick Details Chips from CV */}
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
               <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                <span className="text-xs text-zinc-400 block">Focus</span>
-                <span className="text-sm font-semibold text-white">Full-Stack &amp; Next.js</span>
+                <span className="text-xs text-zinc-400 block font-mono">Education</span>
+                <span className="text-xs sm:text-sm font-semibold text-white">B.Sc. in CSE (DIU)</span>
               </div>
               <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                <span className="text-xs text-zinc-400 block">Availability</span>
-                <span className="text-sm font-semibold text-emerald-400">Open For Hire</span>
+                <span className="text-xs text-zinc-400 block font-mono">Current Role</span>
+                <span className="text-xs sm:text-sm font-semibold text-cyan-400">UI Engineer (ParonSoft)</span>
               </div>
               <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 col-span-2 sm:col-span-1">
-                <span className="text-xs text-zinc-400 block">Communication</span>
-                <span className="text-sm font-semibold text-cyan-400">Fluent &amp; Responsive</span>
+                <span className="text-xs text-zinc-400 block font-mono">Location</span>
+                <span className="text-xs sm:text-sm font-semibold text-emerald-400">Dhaka, Bangladesh</span>
+              </div>
+              <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5">
+                <span className="text-xs text-zinc-400 block font-mono">Direct Phone</span>
+                <span className="text-xs sm:text-sm font-semibold text-zinc-200">{PERSONAL_INFO.phone}</span>
+              </div>
+              <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5">
+                <span className="text-xs text-zinc-400 block font-mono">Email</span>
+                <span className="text-xs sm:text-sm font-semibold text-cyan-300 truncate block">{PERSONAL_INFO.email}</span>
+              </div>
+              <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5">
+                <span className="text-xs text-zinc-400 block font-mono">Global Experience</span>
+                <span className="text-xs sm:text-sm font-semibold text-purple-400">Japan &amp; UK Clients</span>
               </div>
             </div>
 

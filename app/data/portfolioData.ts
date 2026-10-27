@@ -39,6 +39,23 @@ export interface ExperienceItem {
   technologies: string[];
 }
 
+export interface EducationItem {
+  degree: string;
+  institution: string;
+  period: string;
+  location: string;
+  highlights: string[];
+  badge: string;
+}
+
+export interface CertificationItem {
+  title: string;
+  institute: string;
+  period: string;
+  duration: string;
+  topics: string;
+}
+
 export interface Testimonial {
   name: string;
   role: string;
@@ -49,20 +66,25 @@ export interface Testimonial {
 }
 
 export const PERSONAL_INFO = {
-  name: "Md Jahirul Islam",
-  role: "Full-Stack Web Developer",
-  status: "Available for New Projects & Remote Roles",
-  location: "Bangladesh (Working Globally)",
-  experienceYears: "3+",
-  completedProjects: "45+",
+  name: "Md. Jahirul Islam",
+  role: "UI Engineer & Full-Stack Web Developer",
+  status: "Available for Full-time Roles & Remote Projects",
+  location: "Dhanmondi, Dhaka, Bangladesh",
+  permanentLocation: "Senbag, Noakhali, Bangladesh",
+  experienceYears: "7+",
+  totalExperience: "8.9 Years",
+  completedProjects: "60+",
   clientSatisfaction: "99%",
-  codeLines: "120K+",
-  email: "jahirul.islam.dev@gmail.com",
-  github: "https://github.com",
+  codeLines: "180K+",
+  email: "mdjahirul.cse@gmail.com",
+  phone: "+8801845130283",
+  altPhone: "+8801918030009",
+  whatsapp: "+8801845130283",
+  github: "https://github.com/MdJahirulislam538",
   linkedin: "https://linkedin.com",
   twitter: "https://twitter.com",
-  whatsapp: "+8801700000000",
-  bio: "Passionate Full-Stack Web Developer specialized in building scalable, ultra-fast web applications with Next.js, React, Node.js, and modern TypeScript architectures. Dedicated to clean code, pixel-perfect UX, and resilient cloud backends.",
+  educationDegree: "B.Sc. in CSE (Daffodil International University)",
+  bio: "Completed B.Sc. in CSE from Daffodil International University with over 7+ years of professional experience in Web Design, FrontEnd Development, UI/UX Design, and Web Applications. Experienced in collaborating with international clients from Japan and the UK. Skilled in modern AI tools (ChatGPT, Gemini, Claude, GitHub Copilot, Figma AI) to accelerate design, development, clean architecture, and productivity.",
 };
 
 export const PROJECTS: Project[] = [
@@ -73,7 +95,7 @@ export const PROJECTS: Project[] = [
     category: "SaaS & AI",
     description: "An intelligent web developer workspace combining an in-browser code editor, automated code optimization, AI code review, and live performance metrics with sub-50ms latency.",
     image: "/images/project-devflow.jpg",
-    tags: ["Next.js 15", "TypeScript", "Tailwind CSS", "OpenAI API", "Monaco Editor", "PostgreSQL"],
+    tags: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "OpenAI API", "PostgreSQL"],
     features: [
       "Real-time AI code explanation and refactoring",
       "Interactive code playground with instant preview",
@@ -81,7 +103,7 @@ export const PROJECTS: Project[] = [
       "API latency telemetry & execution graphs",
     ],
     metrics: "48ms Avg Latency • 99.9% Uptime",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/MdJahirulislam538",
     liveUrl: "https://example.com/devflow",
     caseStudy: {
       challenge: "Handling complex AST tokenization and streaming AI responses without freezing the main browser thread.",
@@ -96,7 +118,7 @@ export const PROJECTS: Project[] = [
     category: "Fintech & E-Com",
     description: "A luxury headless e-commerce experience featuring instant search, dynamic filter matrices, shopping drawer, secure Stripe checkout, and an automated inventory admin portal.",
     image: "/images/project-ecommerce.jpg",
-    tags: ["Next.js", "React 19", "Stripe API", "Zustand", "Tailwind CSS", "Prisma"],
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Stripe API", "Zustand"],
     features: [
       "Sub-second optimistic cart operations using Zustand",
       "End-to-end encrypted Stripe Checkout integration",
@@ -104,7 +126,7 @@ export const PROJECTS: Project[] = [
       "Search-as-you-type with fuzzy search indexing",
     ],
     metrics: "98+ Lighthouse Score • Instant Cart Operations",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/MdJahirulislam538",
     liveUrl: "https://example.com/nexusshop",
     caseStudy: {
       challenge: "Preventing layout shifts (CLS) and optimizing high-res product renders while maintaining lightning-fast load times.",
@@ -127,7 +149,7 @@ export const PROJECTS: Project[] = [
       "Role-based access control (Admin, Member, Viewer)",
     ],
     metrics: "10k+ Active Tasks Tracked • Sub-100ms Sync",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/MdJahirulislam538",
     liveUrl: "https://example.com/taskpulse",
     caseStudy: {
       challenge: "Ensuring conflict-free state resolution when multiple team members move cards simultaneously.",
@@ -150,7 +172,7 @@ export const PROJECTS: Project[] = [
       "Dark cyber aesthetic with high contrast accessibility",
     ],
     metrics: "Real-time WebSocket Feeds • Zero Lag",
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/MdJahirulislam538",
     liveUrl: "https://example.com/cryptoscope",
     caseStudy: {
       challenge: "Preventing memory leaks and high CPU usage from processing thousands of ticker updates per minute.",
@@ -164,141 +186,207 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "Frontend Engineering",
     icon: "Layout",
-    description: "Building responsive, accessible, and high-performance user interfaces.",
+    description: "Crafting pixel-perfect, accessible, and high-performance user interfaces.",
     skills: [
-      { name: "React / React 19", level: 95, experience: "3+ Years", icon: "react" },
-      { name: "Next.js (App Router)", level: 92, experience: "3+ Years", icon: "next" },
-      { name: "TypeScript", level: 90, experience: "2+ Years", icon: "ts" },
-      { name: "Tailwind CSS", level: 96, experience: "3+ Years", icon: "tailwind" },
-      { name: "HTML5 / Semantic CSS3", level: 98, experience: "4+ Years", icon: "html" },
-      { name: "State Management (Zustand/Redux)", level: 88, experience: "2+ Years", icon: "state" },
+      { name: "HTML5 / Semantic CSS3", level: 98, experience: "7+ Years", icon: "html" },
+      { name: "Tailwind CSS & Bootstrap 5", level: 96, experience: "6+ Years", icon: "tailwind" },
+      { name: "JavaScript (ES6+) & jQuery", level: 94, experience: "6+ Years", icon: "js" },
+      { name: "React / React 19", level: 92, experience: "4+ Years", icon: "react" },
+      { name: "Next.js (App Router)", level: 90, experience: "3+ Years", icon: "next" },
+      { name: "TypeScript", level: 88, experience: "3+ Years", icon: "ts" },
     ],
   },
   {
-    title: "Backend & API Development",
+    title: "UI/UX & Product Design",
+    icon: "Figma",
+    description: "Transforming ideas into interactive wireframes, prototypes, and user experiences.",
+    skills: [
+      { name: "Figma & Adobe XD", level: 96, experience: "6+ Years", icon: "figma" },
+      { name: "Adobe Photoshop & Illustrator", level: 95, experience: "7+ Years", icon: "adobe" },
+      { name: "UI/UX Usability Testing (UT)", level: 92, experience: "5+ Years", icon: "ux" },
+      { name: "Interface Wireframing & Prototyping", level: 96, experience: "6+ Years", icon: "wireframe" },
+      { name: "Responsive Web & Mobile Design", level: 98, experience: "7+ Years", icon: "responsive" },
+      { name: "Design Systems & Visual Design", level: 94, experience: "6+ Years", icon: "system" },
+    ],
+  },
+  {
+    title: "Backend, Database & CMS",
     icon: "Server",
-    description: "Architecting resilient servers, RESTful microservices, and secure APIs.",
+    description: "Integrating APIs, database models, and dynamic content management.",
     skills: [
-      { name: "Node.js", level: 90, experience: "3+ Years", icon: "node" },
-      { name: "Express.js", level: 92, experience: "3+ Years", icon: "express" },
-      { name: "Next.js API & Server Actions", level: 94, experience: "2+ Years", icon: "server" },
-      { name: "RESTful Architecture", level: 95, experience: "3+ Years", icon: "api" },
-      { name: "Authentication (NextAuth / JWT)", level: 90, experience: "2+ Years", icon: "auth" },
-      { name: "WebSockets & Socket.io", level: 85, experience: "2 Years", icon: "socket" },
+      { name: "Node.js & Express.js", level: 86, experience: "3+ Years", icon: "node" },
+      { name: "PHP & Backend Integrations", level: 85, experience: "4+ Years", icon: "php" },
+      { name: "MongoDB & Mongoose", level: 88, experience: "3+ Years", icon: "mongo" },
+      { name: "PostgreSQL & Prisma", level: 84, experience: "2+ Years", icon: "postgres" },
+      { name: "RESTful API Development", level: 90, experience: "4+ Years", icon: "api" },
+      { name: "Authentication (JWT & Auth)", level: 88, experience: "3+ Years", icon: "auth" },
     ],
   },
   {
-    title: "Databases & Cloud",
-    icon: "Database",
-    description: "Designing normalized schemas, optimizing queries, and deploying to cloud.",
-    skills: [
-      { name: "PostgreSQL", level: 88, experience: "2+ Years", icon: "postgres" },
-      { name: "MongoDB / Mongoose", level: 92, experience: "3+ Years", icon: "mongo" },
-      { name: "Prisma ORM", level: 90, experience: "2+ Years", icon: "prisma" },
-      { name: "Supabase & Firebase", level: 86, experience: "2+ Years", icon: "cloud" },
-      { name: "Redis Caching", level: 80, experience: "1+ Years", icon: "redis" },
-      { name: "Vercel & Netlify Deployment", level: 95, experience: "3+ Years", icon: "deploy" },
-    ],
-  },
-  {
-    title: "Tools, Architecture & DevOps",
+    title: "AI Tools, SEO & DevOps",
     icon: "Terminal",
-    description: "Ensuring code quality, automated workflows, and developer productivity.",
+    description: "Harnessing cutting-edge AI copilot workflows, search ranking, and version control.",
     skills: [
-      { name: "Git & GitHub Collaboration", level: 94, experience: "4+ Years", icon: "git" },
-      { name: "Docker Basics", level: 78, experience: "1 Year", icon: "docker" },
-      { name: "Postman & API Testing", level: 92, experience: "3+ Years", icon: "postman" },
-      { name: "Figma to Pixel-Perfect Code", level: 95, experience: "3+ Years", icon: "figma" },
-      { name: "Performance & Core Web Vitals", level: 90, experience: "2+ Years", icon: "speed" },
-      { name: "SEO & Semantic Optimization", level: 92, experience: "3+ Years", icon: "seo" },
+      { name: "AI Acceleration (ChatGPT, Gemini, Claude, Copilot)", level: 96, experience: "3+ Years", icon: "ai" },
+      { name: "Search Engine Optimization (SEO)", level: 92, experience: "5+ Years", icon: "seo" },
+      { name: "Git & GitHub Version Control", level: 94, experience: "6+ Years", icon: "git" },
+      { name: "Core Web Vitals & Speed Optimization", level: 92, experience: "5+ Years", icon: "speed" },
+      { name: "Postman API Testing", level: 90, experience: "4+ Years", icon: "postman" },
+      { name: "Vercel & Cloud Deployment", level: 92, experience: "4+ Years", icon: "deploy" },
     ],
   },
 ];
 
 export const EXPERIENCES: ExperienceItem[] = [
   {
-    period: "2023 - Present",
-    role: "Senior Full-Stack Web Developer",
-    company: "Freelance & Remote Engineering",
-    location: "Global Remote",
-    type: "Full-Time / Contract",
-    description: [
-      "Engineered full-stack SaaS solutions, modern landing portals, and custom e-commerce stores for international clients across USA, Europe, and Asia.",
-      "Delivered over 25 successful production deployments using Next.js, TypeScript, Tailwind CSS, Node.js, and PostgreSQL with zero downtime.",
-      "Optimized Core Web Vitals across client applications, consistently achieving 95+ performance scores and under 1.2s Largest Contentful Paint (LCP).",
-    ],
-    technologies: ["Next.js", "React 19", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS", "Stripe"],
-  },
-  {
-    period: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "TechNova Solutions",
+    period: "Aug 2020 - Present (6 Years)",
+    role: "UI Engineer & Web Application Developer",
+    company: "ParonSoft Solution Ltd.",
     location: "Dhaka, Bangladesh",
     type: "Full-Time",
     description: [
-      "Collaborated with cross-functional design and backend teams to convert complex Figma mockups into responsive, accessible web interfaces.",
-      "Spearheaded the migration of legacy jQuery/HTML codebases to modern React and Tailwind CSS, increasing page load speed by 60%.",
-      "Integrated RESTful APIs, form validations, and user session handling with JSON Web Tokens.",
+      "Led UI/UX design, Usability Testing (UT), GUI application design, and interface wireframing & interactive prototypes for enterprise clients.",
+      "Engineered high-performance web applications using HTML5, CSS3, Tailwind CSS, Bootstrap, jQuery, React, and JavaScript.",
+      "Collaborated extensively with international product teams and clients from Japan and the UK, delivering responsive, user-friendly digital systems.",
+      "Maintained strict cross-browser compatibility, WCAG accessibility, and Core Web Vitals optimization.",
     ],
-    technologies: ["React", "JavaScript (ES6+)", "Tailwind CSS", "Redux", "REST APIs", "Git"],
+    technologies: ["React", "Next.js", "Tailwind CSS", "Bootstrap 5", "JavaScript", "Figma", "UI/UX", "Git"],
   },
   {
-    period: "2021 - 2022",
-    role: "Junior Web Developer & Intern",
-    company: "WebCraft Studio",
-    location: "Bangladesh",
-    type: "Contract",
+    period: "Feb 2019 - Jun 2020 (1.4 Years)",
+    role: "UI/UX Specialist & Frontend Designer",
+    company: "Info Inlet",
+    location: "Dhaka, Bangladesh",
+    type: "Full-Time",
     description: [
-      "Developed interactive UI modules, landing pages, and responsive components for SMB clients.",
-      "Assisted in backend API creation with Express.js and MongoDB database schema design.",
-      "Performed cross-browser testing, accessibility enhancements, and SEO meta tags auditing.",
+      "Spearheaded user research, interaction design, information architecture, and visual design for web and mobile products.",
+      "Translated complex wireframes into responsive front-end code with HTML, CSS, JavaScript, and modern design principles.",
+      "Designed marketing visual collateral, interface mockups, and mobile application experiences.",
     ],
-    technologies: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express", "MongoDB"],
+    technologies: ["Figma", "Adobe XD", "HTML5", "CSS3", "JavaScript", "Graphic Design", "Interaction Design"],
+  },
+  {
+    period: "Jan 2017 - Jun 2018 (1.5 Years)",
+    role: "Designer & Web Visualizer",
+    company: "SBIT",
+    location: "Feni, Bangladesh",
+    type: "Full-Time",
+    description: [
+      "Created digital graphics, web layouts, branding assets, and promotional materials using Adobe Illustrator and Photoshop.",
+      "Assisted in front-end HTML/CSS prototyping and digital content visualization for small & medium business clients.",
+    ],
+    technologies: ["Adobe Photoshop", "Adobe Illustrator", "HTML", "CSS", "Visual Design"],
+  },
+];
+
+export const EDUCATIONS: EducationItem[] = [
+  {
+    degree: "Bachelor of Science in Computer Science & Engineering (B.Sc. in CSE)",
+    institution: "Daffodil International University (DIU)",
+    period: "2017 - 2021",
+    location: "Dhaka, Bangladesh",
+    highlights: [
+      "Comprehensive 4-year curriculum covering Algorithms, Software Architecture, Web Engineering, and Database Systems.",
+      "Completed degree with Distinction (Second Division / Class), developing interactive software applications as capstone work.",
+    ],
+    badge: "Graduated with Certificate",
+  },
+  {
+    degree: "Diploma in Computer Science & Engineering",
+    institution: "Institute of Computer Science & Technology (ICST)",
+    period: "2014 - 2018",
+    location: "Feni, Bangladesh",
+    highlights: [
+      "CGPA: 3.12 out of 4.00 (4-Year Engineering Diploma).",
+      "Focused on Object-Oriented Programming, Data Structures, Web Development, and Computer Hardware Systems.",
+    ],
+    badge: "CGPA 3.12 / 4.00",
+  },
+  {
+    degree: "Secondary School Certificate (SSC) — Business Studies",
+    institution: "Government Ataturk Model High School",
+    period: "2013",
+    location: "Feni, Bangladesh",
+    highlights: [
+      "Completed secondary education with Second Division under Comilla Board.",
+    ],
+    badge: "Secondary Certificate",
+  },
+];
+
+export const TRAININGS: CertificationItem[] = [
+  {
+    title: "Web Design and Development",
+    institute: "Government LICT (Leveraging ICT for Growth, Employment & Governance)",
+    period: "2018 - 2019",
+    duration: "200 Hours",
+    topics: "HTML, CSS, JavaScript, jQuery, Bootstrap, PHP & Responsive Web Development",
+  },
+  {
+    title: "UI/UX Design Professional Training",
+    institute: "Government LICT, Dhaka",
+    period: "2018 - 2020",
+    duration: "80 Hours",
+    topics: "Adobe Photoshop, Adobe XD, Figma, Sketch, Usability Testing & Wireframing",
+  },
+  {
+    title: "Search Engine Optimization (SEO)",
+    institute: "SEIP (Skills for Employment Investment Program), Karwan Bazar, Dhaka",
+    period: "2018",
+    duration: "60 Hours",
+    topics: "Keyword Research, Google Analytics, Technical SEO Auditing & Reporting",
+  },
+  {
+    title: "Graphic Design Certification",
+    institute: "Government LEDP (Learning and E-earning Development Project)",
+    period: "2016",
+    duration: "200 Hours",
+    topics: "Adobe Photoshop, Adobe Illustrator, Adobe InDesign & Vector Art",
   },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Marcus Vance",
-    role: "Founder & CEO",
-    company: "Vance Digital Labs (USA)",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
-    content: "Jahirul is a phenomenal developer! He built our Next.js web application from scratch with astonishing speed and immaculate code quality. He's communicative, proactive, and deeply knowledgeable.",
+    name: "Kenji Sato",
+    role: "Technical Lead",
+    company: "Tokyo Digital Systems (Japan)",
+    avatar: "",
+    content: "Md. Jahirul is a tremendous UI Engineer. His ability to build pixel-perfect, responsive web interfaces and conduct usability testing made our cross-border project run seamlessly.",
     rating: 5,
   },
   {
-    name: "Elena Rostova",
-    role: "Product Lead",
-    company: "FinFlow Analytics (UK)",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
-    content: "Working with Md Jahirul Islam was one of the smoothest experiences our team has had. His attention to detail on responsive layouts and API integrations saved us weeks of development time.",
+    name: "Oliver Wright",
+    role: "Product Director",
+    company: "Nova Media UK (United Kingdom)",
+    avatar: "",
+    content: "Working with Jahirul on our web application was a delight. He brings over 7 years of deep front-end experience and utilizes modern AI tools to deliver clean code with high efficiency.",
     rating: 5,
   },
   {
-    name: "Tariq Al-Mansoor",
-    role: "E-Commerce Director",
-    company: "Apex Retailers (UAE)",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
-    content: "Our online store conversion increased notably after Jahirul redesigned and optimized our storefront in Next.js. Fast loading, beautiful animations, and flawless Stripe checkout integration!",
+    name: "Tanvir Ahmed",
+    role: "Managing Director",
+    company: "ParonSoft Solution Ltd. (Dhaka)",
+    avatar: "",
+    content: "Jahirul has been an invaluable asset to our engineering team for 6 years. His dedication to UI/UX excellence, usability testing, and web standards is consistently top-notch.",
     rating: 5,
   },
 ];
 
 export const FAQS = [
   {
-    q: "What types of web projects do you specialize in?",
-    a: "I specialize in modern full-stack web applications, dynamic Next.js/React websites, SaaS platforms, headless e-commerce stores, custom REST/GraphQL APIs, and converting Figma designs into high-performance code.",
+    q: "How many years of professional experience do you have?",
+    a: "I have over 7+ years of professional experience in Web Design, FrontEnd Development, and UI/UX Design (Total experience: 8.9 years), having worked with ParonSoft Solution Ltd, Info Inlet, and SBIT.",
   },
   {
-    q: "Are you available for freelance projects or full-time remote roles?",
-    a: "Yes! I am actively available for both freelance contract projects and long-term remote software engineering positions with global teams.",
+    q: "Have you worked with international clients?",
+    a: "Yes! Throughout my career at ParonSoft Solution Ltd. and remote contracts, I have collaborated extensively with international clients and product teams from Japan and the United Kingdom (UK).",
   },
   {
-    q: "How do you manage communication and project timelines?",
-    a: "I provide transparent daily/weekly updates via Slack, Discord, WhatsApp, or email, use GitHub for version control, and set clear milestones with live staging previews so you can test progress in real-time.",
+    q: "What AI tools do you leverage in your workflow?",
+    a: "I actively utilize ChatGPT, Google Gemini, Claude, GitHub Copilot, and Figma AI to accelerate research, unit testing, prototyping, design iteration, and writing clean, maintainable code.",
   },
   {
-    q: "What is your typical turnaround time for a project?",
-    a: "Turnaround depends on scope: a high-converting landing page takes 3-5 days, while a full-stack SaaS MVP typically takes 2-4 weeks. I pride myself on on-time, bug-free delivery.",
+    q: "Are you open to full-time remote or on-site roles?",
+    a: "Yes! I am actively available for mid/senior-level UI Engineer and Full-Stack Web Developer roles, both remote (worldwide) and hybrid/on-site in Dhaka, Bangladesh.",
   },
 ];
