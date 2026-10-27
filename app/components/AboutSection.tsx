@@ -77,7 +77,7 @@ export default function AboutSection() {
                   src="/images/avatar.jpg"
                   alt={PERSONAL_INFO.name}
                   fill
-                  className="object-cover object-top hover:scale-105 transition-transform duration-700"
+                  className="object-cover object-center hover:scale-105 transition-transform duration-700"
                   priority
                 />
 

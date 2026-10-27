@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./public/images/avatar.jpg" alt="Md Jahirul Islam" width="130" style="border-radius: 50%; border: 3px solid #38bdf8; box-shadow: 0 0 25px rgba(56, 189, 248, 0.35); margin-bottom: 12px;" />
+
 # ⚡ Md Jahirul Islam — Full-Stack Developer Portfolio
 
 <p align="center">
